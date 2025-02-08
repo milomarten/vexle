@@ -11,5 +11,7 @@ public enum FlagCharge {
     TERRITORY,
     WEAPON,
     ANOTHER_FLAG,
-    TEXT
+    TEXT,
+    HUMAN,
+    BUILDING
 }

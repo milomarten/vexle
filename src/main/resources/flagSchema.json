@@ -94,7 +94,9 @@
         "TERRITORY",
         "WEAPON",
         "ANOTHER_FLAG",
-        "TEXT"
+        "TEXT",
+        "HUMAN",
+        "BUILDING"
       ]
     },
     "patterns": {
@@ -103,6 +105,8 @@
         "HORIZONTAL_STRIPE",
         "VERTICAL_STRIPE",
         "DIAGONAL_STRIPE",
+        "CROSS",
+        "DIAGONAL_CROSS",
         "GRID",
         "DIAGONAL_GRID",
         "CANTON",

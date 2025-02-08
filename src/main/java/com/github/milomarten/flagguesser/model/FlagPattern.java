@@ -5,6 +5,8 @@ public enum FlagPattern {
     HORIZONTAL_STRIPE,
     VERTICAL_STRIPE,
     DIAGONAL_STRIPE,
+    CROSS,
+    DIAGONAL_CROSS,
     GRID,
     DIAGONAL_GRID,
     CANTON,

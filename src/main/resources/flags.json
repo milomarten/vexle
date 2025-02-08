@@ -12,7 +12,7 @@
     "name": "Åland Islands",
     "emoji": "\uD83C\uDDE6\uD83C\uDDFD",
     "colors": ["BLUE", "RED", "YELLOW"],
-    "patterns": ["FIELD", "HORIZONTAL_STRIPE", "VERTICAL_STRIPE"]
+    "patterns": ["FIELD", "CROSS"]
   },
   {
     "countryCode": "AL",
@@ -136,7 +136,7 @@
     "name": "Bahrain",
     "emoji": "\uD83C\uDDE7\uD83C\uDDED",
     "colors": ["RED", "WHITE"],
-    "patterns": [{"item": "FIELD", "count": 2}, {"item": "TRIANGLE", "count": 5}]
+    "patterns": ["VERTICAL_STRIPE", "FIELD", {"item": "TRIANGLE", "count": 5}]
   },
   {
     "countryCode": "BD",
@@ -166,5 +166,137 @@
     "emoji": "\uD83C\uDDE7\uD83C\uDDEA",
     "colors": ["BLACK", "YELLOW", "RED"],
     "patterns": [{"item": "VERTICAL_STRIPE", "count": 3}]
+  },
+  {
+    "countryCode": "BZ",
+    "name": "Belize",
+    "emoji": "\uD83C\uDDE7\uD83C\uDDFF",
+    "colors": ["RED", "BLUE"],
+    "patterns": [{"item": "HORIZONTAL_STRIPE", "count": 2}, "FIELD"],
+    "charges": ["EMBLEM"]
+  },
+  {
+    "countryCode": "BJ",
+    "name": "Benin",
+    "emoji": "\uD83C\uDDE7\uD83C\uDDEF",
+    "colors": ["RED", "GREEN", "YELLOW"],
+    "patterns": ["HORIZONTAL_STRIPE", "HORIZONTAL_STRIPE", "VERTICAL_STRIPE"]
+  },
+  {
+    "countryCode": "BM",
+    "name": "Bermuda",
+    "emoji": "\uD83C\uDDE7\uD83C\uDDF2",
+    "colors": ["RED"],
+    "patterns": ["CANTON"],
+    "charges": ["EMBLEM", "ANOTHER_FLAG"]
+  },
+  {
+    "countryCode": "BT",
+    "name": "Bhutan",
+    "emoji": "\uD83C\uDDE7\uD83C\uDDF9",
+    "colors": ["YELLOW", "ORANGE"],
+    "patterns": ["TRIANGLE", "TRIANGLE"],
+    "charges": ["ANIMAL"]
+  },
+  {
+    "countryCode": "BO",
+    "name": "Bolivia",
+    "emoji": "\uD83C\uDDE7\uD83C\uDDF4",
+    "colors": ["RED", "YELLOW", "GREEN"],
+    "charges": ["ANIMAL", "EMBLEM", "TEXT"],
+    "patterns": [{"item": "HORIZONTAL_STRIPE", "count": 3}]
+  },
+  {
+    "countryCode": "BA",
+    "name": "Bosnia and Herzegovina",
+    "emoji": "\uD83C\uDDE7\uD83C\uDDE6",
+    "colors": ["BLUE", "YELLOW", "WHITE"],
+    "patterns": ["TRIANGLE"],
+    "charges": [{"item": "STAR", "count": 8}]
+  },
+  {
+    "countryCode": "BW",
+    "name": "Botswana",
+    "emoji": "\uD83C\uDDE7\uD83C\uDDFC",
+    "colors": ["LIGHT_BLUE", "WHITE", "BLACK"],
+    "patterns": [{"item": "HORIZONTAL_STRIPE", "count": 5}]
+  },
+  {
+    "countryCode": "BV",
+    "name": "Bouvet Island",
+    "emoji": "\uD83C\uDDE7\uD83C\uDDFB",
+    "colors": ["BLUE", "WHITE", "RED"],
+    "patterns": ["FIELD", "CROSS"]
+  },
+  {
+    "countryCode": "BR",
+    "name": "Brazil",
+    "emoji": "\uD83C\uDDE7\uD83C\uDDF7",
+    "colors": ["GREEN", "YELLOW", "BLUE"],
+    "patterns": ["DIAMOND", "CIRCLE"],
+    "charges": [{"item": "STAR", "count": 27}, "TEXT"]
+  },
+  {
+    "countryCode": "IO",
+    "name": "British Indian Ocean Territory",
+    "emoji": "\uD83C\uDDEE\uD83C\uDDF4",
+    "colors": ["BLUE", "WHITE"],
+    "patterns": [{"item": "HORIZONTAL_STRIPE", "count": 13}, "CANTON"],
+    "charges": ["ANOTHER_FLAG", "PLANT"]
+  },
+  {
+    "countryCode": "BN",
+    "name": "Brunei",
+    "emoji": "\uD83C\uDDE7\uD83C\uDDF3",
+    "colors": ["YELLOW", "WHITE", "BLACK"],
+    "patterns": ["FIELD", "DIAGONAL_STRIPE", "DIAGONAL_STRIPE"],
+    "charges": ["EMBLEM"]
+  },
+  {
+    "countryCode": "BG",
+    "name": "Bulgaria",
+    "emoji": "\uD83C\uDDE7\uD83C\uDDEC",
+    "colors": ["WHITE", "GREEN", "RED"],
+    "patterns": [{"item": "HORIZONTAL_STRIPE", "count": 3}]
+  },
+  {
+    "countryCode": "BF",
+    "name": "Burkina Faso",
+    "emoji": "\uD83C\uDDE7\uD83C\uDDEB",
+    "colors": ["RED", "GREEN", "YELLOW"],
+    "patterns": ["HORIZONTAL_STRIPE", "HORIZONTAL_STRIPE"],
+    "charges": ["STAR"]
+  },
+  {
+    "countryCode": "BI",
+    "name": "Burundi",
+    "emoji": "\uD83C\uDDE7\uD83C\uDDEE",
+    "colors": ["RED", "GREEN", "WHITE"],
+    "patterns": ["DIAGONAL_CROSS", "CIRCLE"],
+    "charges": [{"item": "STAR", "count": 3}]
+  },
+  {
+    "countryCode": "KH",
+    "name": "Cambodia",
+    "emoji": "\uD83C\uDDF0\uD83C\uDDED",
+    "colors": ["RED", "BLUE", "WHITE"],
+    "patterns": ["HORIZONTAL_STRIPE", "HORIZONTAL_STRIPE"],
+    "charges": ["BUILDING"]
+  },
+  {
+    "countryCode": "CM",
+    "name": "Cameroon",
+    "emoji": "\uD83C\uDDE8\uD83C\uDDF2",
+    "colors": ["GREEN", "RED", "YELLOW"],
+    "patterns": [{"item": "VERTICAL_STRIPE", "count": 3}],
+    "charges": ["STAR"]
+  },
+  {
+    "countryCode": "CA",
+    "name": "Canada",
+    "emoji": "\uD83C\uDDE8\uD83C\uDDE6",
+    "colors": ["RED", "WHITE"],
+    "patterns": [{"item": "VERTICAL_STRIPE", "count": 3}],
+    "charges": ["PLANT"]
   }
 ]
