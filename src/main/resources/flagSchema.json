@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "flags",
+  "title": "Flags",
+  "description": "Flag definitions",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "countryCode": {
+        "type": "string"
+      },
+      "name": {
+        "type": "string"
+      },
+      "emoji": {
+        "type": "string"
+      },
+      "colors": {
+        "type": "array",
+        "uniqueItems": true,
+        "items": { "$ref": "#/$defs/colors" }
+      },
+      "charges": {
+        "type": "array",
+        "items": {
+          "oneOf": [
+            { "$ref": "#/$defs/charges" },
+            {
+              "type": "object",
+              "properties": {
+                "item": {
+                  "$ref": "#/$defs/charges"
+                },
+                "count": {
+                  "type": "number",
+                  "minimum": 1
+                }
+              },
+              "required": ["item", "count"]
+            }
+          ]
+        }
+      },
+      "patterns": {
+        "type": "array",
+        "items": {
+          "oneOf": [
+            { "$ref": "#/$defs/patterns" },
+            {
+              "type": "object",
+              "properties": {
+                "item": {
+                  "$ref": "#/$defs/patterns"
+                },
+                "count": {
+                  "type": "number",
+                  "minimum": 1
+                }
+              },
+              "required": ["item", "count"]
+            }
+          ]
+        }
+      }
+    },
+    "required": ["countryCode", "name" ,"emoji", "colors", "patterns"]
+  },
+  "$defs": {
+    "colors": {
+      "enum": [
+        "RED",
+        "ORANGE",
+        "YELLOW",
+        "GREEN",
+        "LIGHT_BLUE",
+        "BLUE",
+        "PURPLE",
+        "PINK",
+        "BLACK",
+        "WHITE",
+        "GRAY"
+      ]
+    },
+    "charges": {
+      "enum": [
+        "STAR",
+        "SUN",
+        "MOON",
+        "PLANT",
+        "ANIMAL",
+        "EMBLEM",
+        "CROSS",
+        "TERRITORY",
+        "WEAPON",
+        "ANOTHER_FLAG",
+        "TEXT"
+      ]
+    },
+    "patterns": {
+      "enum": [
+        "FIELD",
+        "HORIZONTAL_STRIPE",
+        "VERTICAL_STRIPE",
+        "DIAGONAL_STRIPE",
+        "GRID",
+        "DIAGONAL_GRID",
+        "CANTON",
+        "BORDER",
+        "TRIANGLE",
+        "CIRCLE",
+        "DIAMOND",
+        "ORNAMENT"
+      ]
+    }
+  }
+}
