@@ -298,5 +298,541 @@
     "colors": ["RED", "WHITE"],
     "patterns": [{"item": "VERTICAL_STRIPE", "count": 3}],
     "charges": ["PLANT"]
+  },
+  {
+    "countryCode": "KY",
+    "name": "Cayman Islands",
+    "emoji": "\uD83C\uDDF0\uD83C\uDDFE",
+    "colors": ["BLUE"],
+    "patterns": ["FIELD", "CANTON"],
+    "charges": ["ANOTHER_FLAG", "EMBLEM", "ANIMAL", "ANIMAL", "TEXT", {"item": "STAR", "count": 3}]
+  },
+  {
+    "countryCode": "CF",
+    "name": "Central African Republic",
+    "emoji": "\uD83C\uDDE8\uD83C\uDDEB",
+    "colors": ["BLUE", "WHITE", "GREEN", "YELLOW", "RED"],
+    "patterns": [{"item": "HORIZONTAL_STRIPE", "count": 4}, "VERTICAL_STRIPE"],
+    "charges": ["STAR"]
+  },
+  {
+    "countryCode": "TD",
+    "name": "Chad",
+    "emoji": "\uD83C\uDDF9\uD83C\uDDE9",
+    "colors": ["BLUE", "YELLOW", "RED"],
+    "patterns": [{"item": "VERTICAL_STRIPE", "count": 3}]
+  },
+  {
+    "countryCode": "CL",
+    "name": "Chile",
+    "emoji": "\uD83C\uDDE8\uD83C\uDDF1",
+    "colors": ["BLUE", "WHITE", "RED"],
+    "patterns": ["HORIZONTAL_STRIPE", "HORIZONTAL_STRIPE", "CANTON"],
+    "charges": ["STAR"]
+  },
+  {
+    "countryCode": "CN",
+    "name": "China",
+    "emoji": "\uD83C\uDDE8\uD83C\uDDF3",
+    "colors": ["RED", "YELLOW"],
+    "patterns": ["FIELD"],
+    "charges": [{"item": "STAR", "count": 5}]
+  },
+  {
+    "countryCode": "CX",
+    "name": "Christmas Island",
+    "emoji": "\uD83C\uDDE8\uD83C\uDDFD",
+    "colors": ["BLUE", "GREEN", "YELLOW", "WHITE"],
+    "patterns": ["TRIANGLE", "TRIANGLE", "CIRCLE"],
+    "charges": [{"item": "STAR", "count": 5}, "ANIMAL", "TERRITORY"]
+  },
+  {
+    "countryCode": "CC",
+    "name": "Cocos (Keeling) Islands",
+    "emoji": "\uD83C\uDDE8\uD83C\uDDE8",
+    "colors": ["GREEN", "YELLOW"],
+    "patterns": ["FIELD", "CIRCLE"],
+    "charges": ["MOON", "PLANT", {"item": "STAR", "count": 5}]
+  },
+  {
+    "countryCode": "CO",
+    "name": "Colombia",
+    "emoji": "\uD83C\uDDE8\uD83C\uDDF4",
+    "colors": ["YELLOW", "BLUE", "RED"],
+    "patterns": [{"item": "HORIZONTAL_STRIPE", "count": 3}]
+  },
+  {
+    "countryCode": "KM",
+    "name": "The Comoros",
+    "emoji": "\uD83C\uDDF0\uD83C\uDDF2",
+    "colors": ["YELLOW", "WHITE", "RED", "BLUE", "GREEN"],
+    "patterns": [{"item": "HORIZONTAL_STRIPE", "count": 4}, "TRIANGLE"],
+    "charges": ["MOON", {"item": "STAR", "count": 4}]
+  },
+  {
+    "countryCode": "CD",
+    "name": "Democratic Republic of the Congo",
+    "emoji": "\uD83C\uDDE8\uD83C\uDDE9",
+    "colors": ["LIGHT_BLUE", "RED", "YELLOW"],
+    "patterns": ["FIELD", "DIAGONAL_STRIPE"],
+    "charges": ["STAR"]
+  },
+  {
+    "countryCode": "CG",
+    "name": "Republic of the Congo",
+    "emoji": "\uD83C\uDDE8\uD83C\uDDEC",
+    "colors": ["GREEN", "YELLOW", "RED"],
+    "patterns": ["TRIANGLE", "TRIANGLE", "DIAGONAL_STRIPE"]
+  },
+  {
+    "countryCode": "CK",
+    "name": "Cook Islands",
+    "emoji": "\uD83C\uDDE8\uD83C\uDDF0",
+    "colors": ["BLUE", "WHITE"],
+    "patterns": ["FIELD", "CANTON"],
+    "charges": ["ANOTHER_FLAG", {"item": "STAR", "count": 15}]
+  },
+  {
+    "countryCode": "CR",
+    "name": "Costa Rica",
+    "emoji": "\uD83C\uDDE8\uD83C\uDDF7",
+    "colors": ["BLUE", "WHITE", "RED"],
+    "patterns": [{"item": "HORIZONTAL_STRIPE", "count": 5}]
+  },
+  {
+    "countryCode": "HR",
+    "name": "Croatia",
+    "emoji": "\uD83C\uDDED\uD83C\uDDF7",
+    "colors": ["RED", "WHITE", "BLUE"],
+    "patterns": [{"item": "HORIZONTAL_STRIPE", "count": 3}],
+    "charges": ["EMBLEM"]
+  },
+  {
+    "countryCode": "CU",
+    "name": "Cuba",
+    "emoji": "\uD83C\uDDE8\uD83C\uDDFA",
+    "colors": ["BLUE", "WHITE", "RED"],
+    "patterns": [{"item": "HORIZONTAL_STRIPE", "count": 5}, "TRIANGLE"],
+    "charges": ["STAR"]
+  },
+  {
+    "countryCode": "CW",
+    "name": "Curaçao",
+    "emoji": "\uD83C\uDDE8\uD83C\uDDFC",
+    "colors": ["BLUE", "YELLOW", "WHITE"],
+    "patterns": ["FIELD", "HORIZONTAL_STRIPE"],
+    "charges": ["STAR", "STAR"]
+  },
+  {
+    "countryCode": "CY",
+    "name": "Cyprus",
+    "emoji": "\uD83C\uDDE8\uD83C\uDDFE",
+    "colors": ["WHITE", "ORANGE", "GREEN"],
+    "patterns": ["FIELD"],
+    "charges": ["TERRITORY", "PLANT"]
+  },
+  {
+    "countryCode": "CZ",
+    "name": "Czechia",
+    "emoji": "\uD83C\uDDE8\uD83C\uDDFF",
+    "colors": ["WHITE", "RED", "BLUE"],
+    "patterns": ["HORIZONTAL_STRIPE", "HORIZONTAL_STRIPE", "TRIANGLE"]
+  },
+  {
+    "countryCode": "CI",
+    "name": "Côte d'Ivoire",
+    "emoji": "\uD83C\uDDE8\uD83C\uDDEE",
+    "colors": ["ORANGE", "WHITE", "GREEN"],
+    "patterns": [{"item": "HORIZONTAL_STRIPE", "count": 3}]
+  },
+  {
+    "countryCode": "DK",
+    "name": "Denmark",
+    "emoji": "\uD83C\uDDE9\uD83C\uDDF0",
+    "colors": ["RED", "WHITE"],
+    "patterns": ["FIELD", "CROSS"]
+  },
+  {
+    "countryCode": "DJ",
+    "name": "Djibouti",
+    "emoji": "\uD83C\uDDE9\uD83C\uDDEF",
+    "colors": ["LIGHT_BLUE", "GREEN", "WHITE", "RED"],
+    "patterns": ["HORIZONTAL_STRIPE", "HORIZONTAL_STRIPE", "TRIANGLE"],
+    "charges": ["STAR"]
+  },
+  {
+    "countryCode": "DM",
+    "name": "Dominica",
+    "emoji": "\uD83C\uDDE9\uD83C\uDDF2",
+    "colors": ["GREEN", "YELLOW", "BLACK", "WHITE", "RED"],
+    "patterns": ["FIELD", {"item": "HORIZONTAL_STRIPE", "count": 3}, {"item": "VERTICAL_STRIPE", "count": 3}, "CIRCLE"],
+    "charges": ["ANIMAL", {"item": "STAR", "count": 10}]
+  },
+  {
+    "countryCode": "DO",
+    "name": "Dominican Republic",
+    "emoji": "\uD83C\uDDE9\uD83C\uDDF4",
+    "colors": ["BLUE", "RED", "WHITE"],
+    "patterns": ["CROSS", "GRID"],
+    "charges": ["EMBLEM"]
+  },
+  {
+    "countryCode": "EC",
+    "name": "Ecuador",
+    "emoji": "\uD83C\uDDEA\uD83C\uDDE8",
+    "colors": ["YELLOW", "BLUE", "RED"],
+    "patterns": [{"item": "HORIZONTAL_STRIPE", "count": 3}],
+    "charges": ["EMBLEM", "ANIMAL"]
+  },
+  {
+    "countryCode": "EG",
+    "name": "Egypt",
+    "emoji": "\uD83C\uDDEA\uD83C\uDDEC",
+    "colors": ["RED", "WHITE", "BLACK"],
+    "patterns": [{"item": "HORIZONTAL_STRIPE", "count": 3}],
+    "charges": ["ANIMAL"]
+  },
+  {
+    "countryCode": "SV",
+    "name": "El Salvador",
+    "emoji": "\uD83C\uDDF8\uD83C\uDDFB",
+    "colors": ["BLUE", "WHITE"],
+    "patterns": [{"item": "HORIZONTAL_STRIPE", "count": 3}],
+    "charges": ["EMBLEM"]
+  },
+  {
+    "countryCode": "GQ",
+    "name": "Equatorial Guinea",
+    "emoji": "\uD83C\uDDEC\uD83C\uDDF6",
+    "colors": ["GREEN", "WHITE", "RED", "BLUE"],
+    "patterns": [{"item": "HORIZONTAL_STRIPE", "count": 3}, "TRIANGLE"],
+    "charges": ["EMBLEM", "PLANT", {"item": "STAR", "count": 6}, "TEXT"]
+  },
+  {
+    "countryCode": "ER",
+    "name": "Eritrea",
+    "emoji": "\uD83C\uDDEA\uD83C\uDDF7",
+    "colors": ["GREEN", "RED", "LIGHT_BLUE", "YELLOW"],
+    "patterns": [{"item": "TRIANGLE", "count": 3}],
+    "charges": ["EMBLEM", "PLANT"]
+  },
+  {
+    "countryCode": "EE",
+    "name": "Estonia",
+    "emoji": "\uD83C\uDDEA\uD83C\uDDEA",
+    "colors": ["LIGHT_BLUE", "BLACK", "WHITE"],
+    "patterns": [{"item": "HORIZONTAL_STRIPE", "count": 3}]
+  },
+  {
+    "countryCode": "SZ",
+    "name": "Eswatini",
+    "emoji": "\uD83C\uDDF8\uD83C\uDDFF",
+    "colors": ["BLUE", "YELLOW", "RED", "BLACK", "WHITE"],
+    "patterns": [{"item": "HORIZONTAL_STRIPE", "count": 5}],
+    "charges": ["EMBLEM"]
+  },
+  {
+    "countryCode": "ET",
+    "name": "Ethiopia",
+    "emoji": "\uD83C\uDDEA\uD83C\uDDF9",
+    "colors": ["GREEN", "YELLOW", "RED", "BLUE"],
+    "patterns": [{"item": "HORIZONTAL_STRIPE", "count": 3}, "CIRCLE"],
+    "charges": ["STAR"]
+  },
+  {
+    "countryCode": "FK",
+    "name": "Falkland Islands",
+    "emoji": "\uD83C\uDDEB\uD83C\uDDF0",
+    "colors": ["BLUE"],
+    "patterns": ["FIELD", "CANTON"],
+    "charges": ["ANOTHER_FLAG", "EMBLEM", "TEXT", "ANIMAL"]
+  },
+  {
+    "countryCode": "FO",
+    "name": "Faroe Islands",
+    "emoji": "\uD83C\uDDEB\uD83C\uDDF4",
+    "colors": ["WHITE", "RED", "BLUE"],
+    "patterns": ["FIELD", "CROSS"]
+  },
+  {
+    "countryCode": "FJ",
+    "name": "Fiji",
+    "emoji": "\uD83C\uDDEB\uD83C\uDDEF",
+    "colors": ["LIGHT_BLUE"],
+    "patterns": ["CANTON", "FIELD"],
+    "charges": ["EMBLEM", "ANOTHER_FLAG", "ANIMAL", "ANIMAL", {"item": "PLANT", "count": 3}]
+  },
+  {
+    "countryCode": "FI",
+    "name": "Finland",
+    "emoji": "\uD83C\uDDEB\uD83C\uDDEE",
+    "colors": ["WHITE", "BLUE"],
+    "patterns": ["FIELD", "CROSS"]
+  },
+  {
+    "countryCode": "FR",
+    "name": "France",
+    "emoji": "\uD83C\uDDEB\uD83C\uDDF7",
+    "colors": ["BLUE", "WHITE", "RED"],
+    "patterns": [{"item": "VERTICAL_STRIPE", "count": 3}]
+  },
+  {
+    "countryCode": "GF",
+    "name": "French Guiana",
+    "emoji": "\uD83C\uDDEC\uD83C\uDDEB",
+    "colors": ["YELLOW", "GREEN", "RED"],
+    "patterns": ["TRIANGLE", "TRIANGLE"],
+    "charges": ["STAR"]
+  },
+  {
+    "countryCode": "PF",
+    "name": "French Polynesia",
+    "emoji": "\uD83C\uDDF5\uD83C\uDDEB",
+    "colors": ["RED", "WHITE"],
+    "patterns": [{"item": "HORIZONTAL_STRIPE", "count": 3}],
+    "charges": ["EMBLEM", "SUN"]
+  },
+  {
+    "countryCode": "TF",
+    "name": "French Southern Territories",
+    "emoji": "\uD83C\uDDF9\uD83C\uDDEB",
+    "colors": ["BLUE", "WHITE"],
+    "patterns": ["CANTON", "FIELD"],
+    "charges": ["ANOTHER_FLAG", "TEXT", {"item": "STAR", "count": 5}]
+  },
+  {
+    "countryCode": "GA",
+    "name": "Gabon",
+    "emoji": "\uD83C\uDDEC\uD83C\uDDE6",
+    "colors": ["GREEN", "YELLOW", "BLUE"],
+    "patterns": [{"item": "HORIZONTAL_STRIPE", "count": 3}]
+  },
+  {
+    "countryCode": "GM",
+    "name": "The Gambia",
+    "emoji": "\uD83C\uDDEC\uD83C\uDDF2",
+    "colors": ["RED", "BLUE", "GREEN", "WHITE"],
+    "patterns": [{"item": "HORIZONTAL_STRIPE", "count": 5}]
+  },
+  {
+    "countryCode": "GE",
+    "name": "Georgia",
+    "emoji": "\uD83C\uDDEC\uD83C\uDDEA",
+    "colors": ["RED", "WHITE"],
+    "patterns": ["CROSS"],
+    "charges": [{"item": "CROSS", "count": 4}]
+  },
+  {
+    "countryCode": "DE",
+    "name": "Germany",
+    "emoji": "\uD83C\uDDE9\uD83C\uDDEA",
+    "colors": ["BLACK", "RED", "YELLOW"],
+    "patterns": [{"item": "HORIZONTAL_STRIPE", "count": 3}]
+  },
+  {
+    "countryCode": "GH",
+    "name": "Ghana",
+    "emoji": "\uD83C\uDDEC\uD83C\uDDED",
+    "colors": ["RED", "YELLOW", "GREEN", "BLACK"],
+    "patterns": [{"item": "HORIZONTAL_STRIPE", "count": 3}],
+    "charges": ["STAR"]
+  },
+  {
+    "countryCode": "GI",
+    "name": "Gibraltar",
+    "emoji": "\uD83C\uDDEC\uD83C\uDDEE",
+    "colors": ["WHITE", "RED"],
+    "patterns": ["FIELD", "HORIZONTAL_STRIPE"],
+    "charges": ["BUILDING"]
+  },
+  {
+    "countryCode": "GR",
+    "name": "Greece",
+    "emoji": "\uD83C\uDDEC\uD83C\uDDF7",
+    "colors": ["BLUE", "WHITE"],
+    "patterns": ["CANTON", {"item": "HORIZONTAL_STRIPE", "count": 9}],
+    "charges": ["CROSS"]
+  },
+  {
+    "countryCode": "GL",
+    "name": "Greenland",
+    "emoji": "\uD83C\uDDEC\uD83C\uDDF1",
+    "colors": ["RED", "WHITE"],
+    "patterns": ["HORIZONTAL_STRIPE", "HORIZONTAL_STRIPE", "CIRCLE"]
+  },
+  {
+    "countryCode": "GD",
+    "name": "Grenada",
+    "emoji": "\uD83C\uDDEC\uD83C\uDDE9",
+    "colors": ["RED", "YELLOW", "GREEN"],
+    "patterns": ["DIAGONAL_GRID", "CIRCLE", "BORDER"],
+    "charges": [{"item": "STAR", "count": 7}]
+  },
+  {
+    "countryCode": "GU",
+    "name": "Guam",
+    "emoji": "\uD83C\uDDEC\uD83C\uDDFA",
+    "colors": ["BLUE", "RED"],
+    "patterns": ["FIELD", "BORDER"],
+    "charges": ["EMBLEM", "PLANT"]
+  },
+  {
+    "countryCode": "GT",
+    "name": "Guatemala",
+    "emoji": "\uD83C\uDDEC\uD83C\uDDF9",
+    "colors": ["LIGHT_BLUE", "WHITE"],
+    "patterns": [{"item": "VERTICAL_STRIPE", "count": 3}],
+    "charges": ["EMBLEM", "TEXT", "ANIMAL", "WEAPON", "PLANT"]
+  },
+  {
+    "countryCode": "GG",
+    "name": "Guernsey",
+    "emoji": "\uD83C\uDDEC\uD83C\uDDEC",
+    "colors": ["WHITE", "RED", "YELLOW"],
+    "patterns": ["FIELD", "CROSS"],
+    "charges": ["CROSS"]
+  },
+  {
+    "countryCode": "GN",
+    "name": "Guinea",
+    "emoji": "\uD83C\uDDEC\uD83C\uDDF3",
+    "colors": ["RED", "YELLOW", "GREEN"],
+    "patterns": [{"item": "HORIZONTAL_STRIPE", "count": 3}]
+  },
+  {
+    "countryCode": "GW",
+    "name": "Guinea-Bissau",
+    "emoji": "\uD83C\uDDEC\uD83C\uDDFC",
+    "colors": ["RED", "YELLOW", "GREEN", "BLACK"],
+    "patterns": [{"item": "HORIZONTAL_STRIPE", "count": 3}],
+    "charges": ["STAR"]
+  },
+  {
+    "countryCode": "GY",
+    "name": "Guyana",
+    "emoji": "\uD83C\uDDEC\uD83C\uDDFE",
+    "colors": ["RED", "YELLOW", "GREEN", "BLACK", "WHITE"],
+    "patterns": ["FIELD", {"item": "TRIANGLE", "count": 2}]
+  },
+  {
+    "countryCode": "HT",
+    "name": "Haiti",
+    "emoji": "\uD83C\uDDED\uD83C\uDDF9",
+    "colors": ["BLUE", "RED"],
+    "patterns": ["HORIZONTAL_STRIPE", "HORIZONTAL_STRIPE"],
+    "charges": ["EMBLEM", "PLANT", "WEAPON", "TEXT"]
+  },
+  {
+    "countryCode": "HN",
+    "name": "Honduras",
+    "emoji": "\uD83C\uDDED\uD83C\uDDF3",
+    "colors": ["LIGHT_BLUE", "WHITE"],
+    "patterns": [{"item": "HORIZONTAL_STRIPE", "count": 3}],
+    "charges": [{"item": "STAR", "count": 5}]
+  },
+  {
+    "countryCode": "HK",
+    "name": "Hong Kong",
+    "emoji": "\uD83C\uDDED\uD83C\uDDF0",
+    "colors": ["RED", "WHITE"],
+    "patterns": ["FIELD"],
+    "charges": ["PLANT", {"item": "STAR", "count": 5}]
+  },
+  {
+    "countryCode": "HU",
+    "name": "Hungary",
+    "emoji": "\uD83C\uDDED\uD83C\uDDFA",
+    "colors": ["RED", "WHITE", "GREEN"],
+    "patterns": [{"item": "HORIZONTAL_STRIPE", "count": 3}]
+  },
+  {
+    "countryCode": "IS",
+    "name": "Iceland",
+    "emoji": "\uD83C\uDDEE\uD83C\uDDF8",
+    "colors": ["BLUE", "RED", "WHITE"],
+    "patterns": ["FIELD", "CROSS"]
+  },
+  {
+    "countryCode": "IN",
+    "name": "India",
+    "emoji": "\uD83C\uDDEE\uD83C\uDDF3",
+    "colors": ["ORANGE", "WHITE", "GREEN"],
+    "patterns": [{"item": "HORIZONTAL_STRIPE", "count": 3}],
+    "charges": ["EMBLEM"]
+  },
+  {
+    "countryCode": "ID",
+    "name": "Indonesia",
+    "emoji": "\uD83C\uDDEE\uD83C\uDDE9",
+    "colors": ["RED", "WHITE"],
+    "patterns": ["HORIZONTAL_STRIPE", "HORIZONTAL_STRIPE"]
+  },
+  {
+    "countryCode": "IR",
+    "name": "Iran",
+    "emoji": "\uD83C\uDDEE\uD83C\uDDF7",
+    "colors": ["GREEN", "WHITE", "RED"],
+    "patterns": [{"item": "HORIZONTAL_STRIPE", "count": 3}],
+    "charges": ["EMBLEM"]
+  },
+  {
+    "countryCode": "IQ",
+    "name": "Iraq",
+    "emoji": "\uD83C\uDDEE\uD83C\uDDF6",
+    "colors": ["RED", "WHITE", "BLACK", "GREEN"],
+    "patterns": [{"item": "HORIZONTAL_STRIPE", "count": 3}],
+    "charges": ["TEXT"]
+  },
+  {
+    "countryCode": "IE",
+    "name": "Ireland",
+    "emoji": "\uD83C\uDDEE\uD83C\uDDEA",
+    "colors": ["GREEN", "WHITE", "ORANGE"],
+    "patterns": [{"item": "VERTICAL_STRIPE", "count": 3}]
+  },
+  {
+    "countryCode": "IM",
+    "name": "Isle of Man",
+    "emoji": "\uD83C\uDDEE\uD83C\uDDF2",
+    "colors": ["RED", "WHITE", "YELLOW"],
+    "patterns": ["FIELD"],
+    "charges": [{"item": "HUMAN", "count": 3}]
+  },
+  {
+    "countryCode": "IT",
+    "name": "Italy",
+    "emoji": "\uD83C\uDDEE\uD83C\uDDF9",
+    "colors": ["GREEN", "WHITE", "RED"],
+    "patterns": [{"item": "VERTICAL_STRIPE", "count": 3}]
+  },
+  {
+    "countryCode": "JM",
+    "name": "Jamaica",
+    "emoji": "\uD83C\uDDEF\uD83C\uDDF2",
+    "colors": ["GREEN", "BLACK", "YELLOW"],
+    "patterns": ["DIAGONAL_CROSS", {"item": "TRIANGLE", "count": 4}]
+  },
+  {
+    "countryCode": "JP",
+    "name": "Japan",
+    "emoji": "\uD83C\uDDEF\uD83C\uDDF5",
+    "colors": ["WHITE", "RED"],
+    "patterns": ["FIELD", "CIRCLE"]
+  },
+  {
+    "countryCode": "JE",
+    "name": "Jersey",
+    "emoji": "\uD83C\uDDEF\uD83C\uDDEA",
+    "colors": ["WHITE", "RED", "YELLOW"],
+    "patterns": ["DIAGONAL_CROSS", "FIELD"],
+    "charges": ["EMBLEM"]
+  },
+  {
+    "countryCode": "JO",
+    "name": "Jordan",
+    "emoji": "\uD83C\uDDEF\uD83C\uDDF4",
+    "colors": ["BLACK", "WHITE", "GREEN", "RED"],
+    "patterns": [{"item": "HORIZONTAL_STRIPE", "count": 3}, "TRIANGLE"],
+    "charges": ["STAR"]
   }
 ]

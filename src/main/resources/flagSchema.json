@@ -114,7 +114,8 @@
         "TRIANGLE",
         "CIRCLE",
         "DIAMOND",
-        "ORNAMENT"
+        "ORNAMENT",
+        "CHEVRON"
       ]
     }
   }

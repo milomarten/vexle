@@ -14,5 +14,6 @@ public enum FlagPattern {
     TRIANGLE,
     ORNAMENT,
     CIRCLE,
-    DIAMOND
+    DIAMOND,
+    CHEVRON
 }
