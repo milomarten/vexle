@@ -13,5 +13,6 @@ public enum FlagCharge {
     ANOTHER_FLAG,
     TEXT,
     HUMAN,
-    BUILDING
+    BUILDING,
+    HEADGEAR
 }
