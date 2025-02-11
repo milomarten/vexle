@@ -7,6 +7,7 @@ import com.github.milomarten.flagguesser.service.FlagAnswerService;
 import com.github.milomarten.flagguesser.service.FlagCompareService;
 import com.github.milomarten.flagguesser.service.FlagLoader;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -33,6 +34,7 @@ public class Endpoint {
     }
 
     @GetMapping("/vexle/flags")
+    @CrossOrigin("*")
     public List<FlagView> flags() {
         return loader.flags()
                 .stream()
