@@ -11,6 +11,7 @@ import java.util.Set;
 @Data
 public class Flag {
     private String countryCode;
+    private String name;
     private String emoji;
     @JsonDeserialize(as = EnumSet.class)
     private Set<FlagColor> colors;
