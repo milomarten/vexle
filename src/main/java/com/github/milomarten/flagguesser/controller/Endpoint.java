@@ -7,10 +7,7 @@ import com.github.milomarten.flagguesser.service.FlagAnswerService;
 import com.github.milomarten.flagguesser.service.FlagCompareService;
 import com.github.milomarten.flagguesser.service.FlagLoader;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -26,7 +23,7 @@ public class Endpoint {
     private FlagLoader loader;
 
     @PostMapping("/vexle/guess")
-    public FlagComparison guess(FlagRequest request) {
+    public FlagComparison guess(@RequestBody FlagRequest request) {
         var answer = request.getHardCodedAnswer() == null ?
                 flagAnswerService.getCodeForDay(request.getDate()) :
                 request.getHardCodedAnswer();

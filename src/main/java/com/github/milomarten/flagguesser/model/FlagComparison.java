@@ -1,40 +1,58 @@
 package com.github.milomarten.flagguesser.model;
 
-import com.github.milomarten.flagguesser.util.MultiEnumSet;
+import lombok.AllArgsConstructor;
 import lombok.Data;
-import org.apache.commons.collections4.MultiSet;
 
-import java.util.EnumSet;
-import java.util.Set;
+import java.util.EnumMap;
+import java.util.Map;
 
 @Data
 public class FlagComparison {
-    private final Set<FlagColor> presentColors = EnumSet.noneOf(FlagColor.class);
-    private final Set<FlagColor> absentColors = EnumSet.noneOf(FlagColor.class);
+    private final Map<FlagColor, Boolean> colors = new EnumMap<>(FlagColor.class);
+    private boolean foundAllColors = false;
 
-    private final MultiSet<FlagCharge> presentCharges = new MultiEnumSet<>(FlagCharge.class);
-    private final MultiSet<FlagCharge> absentCharges = new MultiEnumSet<>(FlagCharge.class);
+    private final Map<FlagCharge, Result> charges = new EnumMap<>(FlagCharge.class);
+    private boolean foundAllCharges = false;
 
-    private final MultiSet<FlagPattern> presentPatterns = new MultiEnumSet<>(FlagPattern.class);
-    private final MultiSet<FlagPattern> absentPatterns = new MultiEnumSet<>(FlagPattern.class);
+    private final Map<FlagPattern, Result> patterns = new EnumMap<>(FlagPattern.class);
+    private boolean foundAllPatterns = false;
 
     public FlagComparison merge(FlagComparison other) {
-        this.presentColors.addAll(other.presentColors);
-        this.absentColors.addAll(other.absentColors);
+        var newComparison = new FlagComparison();
+        newComparison.colors.putAll(this.colors);
+        newComparison.colors.putAll(other.colors);
+        newComparison.foundAllColors = this.foundAllColors || other.foundAllColors;
 
-        mergeMultisets(FlagCharge.values(), this.presentCharges, other.presentCharges);
-        mergeMultisets(FlagCharge.values(), this.absentCharges, other.absentCharges);
-
-        mergeMultisets(FlagPattern.values(), this.presentPatterns, other.presentPatterns);
-        mergeMultisets(FlagPattern.values(), this.absentPatterns, other.absentPatterns);
+        mergeMaps(this.charges, other.charges, newComparison.charges);
+        newComparison.foundAllCharges = this.foundAllCharges || other.foundAllCharges;
+        mergeMaps(this.patterns, other.patterns, newComparison.patterns);
+        newComparison.foundAllPatterns = this.foundAllPatterns || other.foundAllPatterns;
 
         return this;
     }
 
-    private static <T> void mergeMultisets(T[] universe, MultiSet<T> left, MultiSet<T> right) {
-        for (var item : universe) {
-            int newCount = Math.max(left.getCount(item), right.getCount(item));
-            left.setCount(item, newCount);
+    private static <T> void mergeMaps(Map<T, Result> left, Map<T, Result> right, Map<T, Result> result) {
+        result.putAll(left);
+        right.forEach((key, value) -> {
+            result.merge(key, value, Result::merge);
+        });
+    }
+
+    @Data
+    @AllArgsConstructor
+    public static class Result {
+        public static final Result NOOP = new Result(0, 0, false);
+
+        private int present;
+        private int absent;
+        private boolean foundAll;
+
+        private Result merge(Result other) {
+            return new Result(
+                    Math.max(present, other.present),
+                    Math.max(absent, other.absent),
+                    foundAll || other.foundAll
+            );
         }
     }
 }
