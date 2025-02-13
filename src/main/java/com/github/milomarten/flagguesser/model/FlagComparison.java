@@ -1,5 +1,6 @@
 package com.github.milomarten.flagguesser.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
@@ -16,6 +17,11 @@ public class FlagComparison {
 
     private final Map<FlagPattern, Result> patterns = new EnumMap<>(FlagPattern.class);
     private boolean foundAllPatterns = false;
+
+    private boolean guessedCorrectly = false;
+
+    @JsonProperty
+    public boolean foundAll() { return foundAllColors && foundAllCharges && foundAllPatterns; }
 
     public FlagComparison merge(FlagComparison other) {
         var newComparison = new FlagComparison();

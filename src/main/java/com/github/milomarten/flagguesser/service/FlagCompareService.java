@@ -3,9 +3,14 @@ package com.github.milomarten.flagguesser.service;
 import com.github.milomarten.flagguesser.exception.UnknownFlagCodeException;
 import com.github.milomarten.flagguesser.model.Flag;
 import com.github.milomarten.flagguesser.model.FlagComparison;
+import com.github.milomarten.flagguesser.model.FlagResponse;
+import com.github.milomarten.flagguesser.model.IndividualFlagResult;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.Random;
 import java.util.stream.Stream;
 
 @Service
@@ -47,15 +52,16 @@ public class FlagCompareService {
         return comparison;
     }
 
-    public FlagComparison multiCompare(String answer, String... guesses) {
+    public FlagResponse multiCompare(String answer, String... guesses) {
         var answerFlag = flagLoader.getFlag(answer).orElseThrow(() -> new UnknownFlagCodeException(answer));
+        var guessFlags = Arrays.stream(guesses)
+                .map(guess -> flagLoader.getFlag(guess)
+                                .orElseThrow(() -> new UnknownFlagCodeException(guess)))
+                .toList();
 
-        var mergedComparison = Stream.of(guesses)
-                .map(guess -> {
-                    var guessFlag = flagLoader.getFlag(guess)
-                            .orElseThrow(() -> new UnknownFlagCodeException(guess));
-                    return compare(guessFlag, answerFlag);
-                })
+        var mergedComparison = guessFlags
+                .stream()
+                .map(guessFlag -> compare(guessFlag, answerFlag))
                 .reduce(FlagComparison::merge)
                 .orElseThrow();
 
@@ -64,6 +70,14 @@ public class FlagCompareService {
                 .allMatch(fc -> mergedComparison.getColors().getOrDefault(fc, false));
         mergedComparison.setFoundAllColors(allColors);
 
+        computePatterns(answerFlag, mergedComparison);
+        computeCharges(answerFlag, mergedComparison);
+        mergedComparison.setGuessedCorrectly(Arrays.asList(guesses).contains(answer));
+
+        return new FlagResponse(mergedComparison, computeIndividualResults(guessFlags));
+    }
+
+    private static void computePatterns(Flag answerFlag, FlagComparison mergedComparison) {
         var allPatterns = answerFlag.getPatterns()
                 .entrySet()
                 .stream()
@@ -78,7 +92,9 @@ public class FlagCompareService {
                     return false;
                 });
         mergedComparison.setFoundAllPatterns(allPatterns || answerFlag.getPatterns().isEmpty());
+    }
 
+    private static void computeCharges(Flag answerFlag, FlagComparison mergedComparison) {
         var allCharges = answerFlag.getCharges()
                 .entrySet()
                 .stream()
@@ -93,7 +109,11 @@ public class FlagCompareService {
                     return false;
                 });
         mergedComparison.setFoundAllCharges(allCharges || answerFlag.getCharges().isEmpty());
+    }
 
-        return mergedComparison;
+    private List<IndividualFlagResult> computeIndividualResults(List<Flag> guesses) {
+        return guesses.stream()
+                .map(IndividualFlagResult::new)
+                .toList();
     }
 }

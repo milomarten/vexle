@@ -2,6 +2,7 @@ package com.github.milomarten.flagguesser.controller;
 
 import com.github.milomarten.flagguesser.model.FlagComparison;
 import com.github.milomarten.flagguesser.model.FlagRequest;
+import com.github.milomarten.flagguesser.model.FlagResponse;
 import com.github.milomarten.flagguesser.model.FlagView;
 import com.github.milomarten.flagguesser.service.FlagAnswerService;
 import com.github.milomarten.flagguesser.service.FlagCompareService;
@@ -23,7 +24,8 @@ public class Endpoint {
     private FlagLoader loader;
 
     @PostMapping("/vexle/guess")
-    public FlagComparison guess(@RequestBody FlagRequest request) {
+    @CrossOrigin("*")
+    public FlagResponse guess(@RequestBody FlagRequest request) {
         var answer = request.getHardCodedAnswer() == null ?
                 flagAnswerService.getCodeForDay(request.getDate()) :
                 request.getHardCodedAnswer();

@@ -1,4 +1,10 @@
 package com.github.milomarten.flagguesser.model;
 
-public record FlagView(String code, String name, String emoji) {
+import lombok.Data;
+
+@Data
+public class FlagView {
+    private final String code;
+    private final String name;
+    private final String emoji;
 }
