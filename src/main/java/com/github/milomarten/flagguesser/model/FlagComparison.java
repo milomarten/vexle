@@ -18,15 +18,15 @@ public class FlagComparison {
     private final Map<FlagPattern, Result> patterns = new EnumMap<>(FlagPattern.class);
     private boolean foundAllPatterns = false;
 
-    private boolean guessedCorrectly = false;
-
     @JsonProperty
     public boolean foundAll() { return foundAllColors && foundAllCharges && foundAllPatterns; }
 
     public FlagComparison merge(FlagComparison other) {
         var newComparison = new FlagComparison();
         newComparison.colors.putAll(this.colors);
-        newComparison.colors.putAll(other.colors);
+        other.colors.forEach((color, has) -> {
+            newComparison.colors.merge(color, has, (a, b) -> a || b);
+        });
         newComparison.foundAllColors = this.foundAllColors || other.foundAllColors;
 
         mergeMaps(this.charges, other.charges, newComparison.charges);
@@ -34,7 +34,7 @@ public class FlagComparison {
         mergeMaps(this.patterns, other.patterns, newComparison.patterns);
         newComparison.foundAllPatterns = this.foundAllPatterns || other.foundAllPatterns;
 
-        return this;
+        return newComparison;
     }
 
     private static <T> void mergeMaps(Map<T, Result> left, Map<T, Result> right, Map<T, Result> result) {

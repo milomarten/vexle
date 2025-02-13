@@ -10,4 +10,5 @@ import java.util.List;
 public class FlagResponse {
     private FlagComparison comparison;
     private List<IndividualFlagResult> individualFlagResults;
+    private GameStatus status;
 }

@@ -1,22 +1,21 @@
 package com.github.milomarten.flagguesser.service;
 
 import com.github.milomarten.flagguesser.exception.UnknownFlagCodeException;
-import com.github.milomarten.flagguesser.model.Flag;
-import com.github.milomarten.flagguesser.model.FlagComparison;
-import com.github.milomarten.flagguesser.model.FlagResponse;
-import com.github.milomarten.flagguesser.model.IndividualFlagResult;
+import com.github.milomarten.flagguesser.model.*;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.Random;
-import java.util.stream.Stream;
 
 @Service
 @RequiredArgsConstructor
 public class FlagCompareService {
     private final FlagLoader flagLoader;
+
+    @Value("${maxGuesses: 6}")
+    private int maxGuesses;
 
     public FlagComparison compare(Flag guessFlag, Flag answerFlag) {
         var comparison = new FlagComparison();
@@ -25,7 +24,7 @@ public class FlagCompareService {
             comparison.getColors().put(attr, answerFlag.getColors().contains(attr));
         }
 
-        if (guessFlag.getPatterns() != null) {
+        if (guessFlag.getPatterns() != null && answerFlag.getPatterns() != null) {
             for (var attr : guessFlag.getPatterns().uniqueSet()) {
                 var guessCount = guessFlag.getPatterns().getCount(attr);
                 var answerCount = answerFlag.getPatterns().getCount(attr);
@@ -37,7 +36,7 @@ public class FlagCompareService {
             }
         }
 
-        if (guessFlag.getCharges() != null) {
+        if (guessFlag.getCharges() != null && answerFlag.getCharges() != null) {
             for (var attr : guessFlag.getCharges().uniqueSet()) {
                 var guessCount = guessFlag.getCharges().getCount(attr);
                 var answerCount = answerFlag.getCharges().getCount(attr);
@@ -52,9 +51,9 @@ public class FlagCompareService {
         return comparison;
     }
 
-    public FlagResponse multiCompare(String answer, String... guesses) {
+    public FlagResponse multiCompare(String answer, List<String> guesses) {
         var answerFlag = flagLoader.getFlag(answer).orElseThrow(() -> new UnknownFlagCodeException(answer));
-        var guessFlags = Arrays.stream(guesses)
+        var guessFlags = guesses.stream()
                 .map(guess -> flagLoader.getFlag(guess)
                                 .orElseThrow(() -> new UnknownFlagCodeException(guess)))
                 .toList();
@@ -72,9 +71,11 @@ public class FlagCompareService {
 
         computePatterns(answerFlag, mergedComparison);
         computeCharges(answerFlag, mergedComparison);
-        mergedComparison.setGuessedCorrectly(Arrays.asList(guesses).contains(answer));
 
-        return new FlagResponse(mergedComparison, computeIndividualResults(guessFlags));
+        return new FlagResponse(
+                mergedComparison,
+                computeIndividualResults(guessFlags),
+                computeGameStatus(answer, guesses));
     }
 
     private static void computePatterns(Flag answerFlag, FlagComparison mergedComparison) {
@@ -115,5 +116,15 @@ public class FlagCompareService {
         return guesses.stream()
                 .map(IndividualFlagResult::new)
                 .toList();
+    }
+
+    private GameStatus computeGameStatus(String answer, List<String> guesses) {
+        if (guesses.contains(answer)) {
+            return GameStatus.WON;
+        } else if (guesses.size() >= this.maxGuesses) {
+            return GameStatus.LOST;
+        } else {
+            return GameStatus.PLAYING;
+        }
     }
 }
