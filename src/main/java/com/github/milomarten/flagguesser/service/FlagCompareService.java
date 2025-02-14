@@ -79,37 +79,47 @@ public class FlagCompareService {
     }
 
     private static void computePatterns(Flag answerFlag, FlagComparison mergedComparison) {
-        var allPatterns = answerFlag.getPatterns()
-                .entrySet()
-                .stream()
-                .allMatch(answerPattern -> {
-                    if(mergedComparison.getPatterns().containsKey(answerPattern.getElement())) {
-                        var guessCount = mergedComparison.getPatterns().get(answerPattern.getElement());
-                        if (answerPattern.getCount() == guessCount.getPresent()) {
-                            guessCount.setFoundAll(true);
-                            return true;
+        if (answerFlag == null || answerFlag.getPatterns() == null) {
+            mergedComparison.setFoundAllPatterns(true);
+        } else {
+            var allPatterns = answerFlag.getPatterns()
+                    .entrySet()
+                    .stream()
+                    .map(answerPattern -> {
+                        if (mergedComparison.getPatterns().containsKey(answerPattern.getElement())) {
+                            var guessCount = mergedComparison.getPatterns().get(answerPattern.getElement());
+                            if (answerPattern.getCount() == guessCount.getPresent()) {
+                                guessCount.setFoundAll(true);
+                                return true;
+                            }
                         }
-                    }
-                    return false;
-                });
-        mergedComparison.setFoundAllPatterns(allPatterns || answerFlag.getPatterns().isEmpty());
+                        return false;
+                    })
+                    .reduce(true, (a, b) -> a && b);
+            mergedComparison.setFoundAllPatterns(allPatterns || answerFlag.getPatterns().isEmpty());
+        }
     }
 
     private static void computeCharges(Flag answerFlag, FlagComparison mergedComparison) {
-        var allCharges = answerFlag.getCharges()
-                .entrySet()
-                .stream()
-                .allMatch(answerCharges -> {
-                    if(mergedComparison.getCharges().containsKey(answerCharges.getElement())) {
-                        var guessCount = mergedComparison.getCharges().get(answerCharges.getElement());
-                        if (answerCharges.getCount() == guessCount.getPresent()) {
-                            guessCount.setFoundAll(true);
-                            return true;
+        if (answerFlag == null || answerFlag.getCharges() == null) {
+            mergedComparison.setFoundAllCharges(true);
+        } else {
+            var allCharges = answerFlag.getCharges()
+                    .entrySet()
+                    .stream()
+                    .map(answerCharges -> {
+                        if (mergedComparison.getCharges().containsKey(answerCharges.getElement())) {
+                            var guessCount = mergedComparison.getCharges().get(answerCharges.getElement());
+                            if (answerCharges.getCount() == guessCount.getPresent()) {
+                                guessCount.setFoundAll(true);
+                                return true;
+                            }
                         }
-                    }
-                    return false;
-                });
-        mergedComparison.setFoundAllCharges(allCharges || answerFlag.getCharges().isEmpty());
+                        return false;
+                    })
+                    .reduce(true, (a, b) -> a && b);
+            mergedComparison.setFoundAllCharges(allCharges || answerFlag.getCharges().isEmpty());
+        }
     }
 
     private List<IndividualFlagResult> computeIndividualResults(List<Flag> guesses) {
