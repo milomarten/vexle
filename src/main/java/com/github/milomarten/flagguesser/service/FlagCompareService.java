@@ -6,7 +6,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
-import java.util.Arrays;
 import java.util.List;
 
 @Service
@@ -72,10 +71,12 @@ public class FlagCompareService {
         computePatterns(answerFlag, mergedComparison);
         computeCharges(answerFlag, mergedComparison);
 
+        var status = computeGameStatus(answer, guesses);
         return new FlagResponse(
                 mergedComparison,
                 computeIndividualResults(guessFlags),
-                computeGameStatus(answer, guesses));
+                status,
+                status == GameStatus.PLAYING ? null : new FlagView(answerFlag));
     }
 
     private static void computePatterns(Flag answerFlag, FlagComparison mergedComparison) {

@@ -37,7 +37,7 @@ public class Endpoint {
     public List<FlagView> flags() {
         return loader.flags()
                 .stream()
-                .map(f -> new FlagView(f.getCountryCode(), f.getName(), f.getEmoji()))
+                .map(FlagView::new)
                 .toList();
     }
 }

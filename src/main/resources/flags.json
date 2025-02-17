@@ -704,7 +704,7 @@
     "name": "Guinea-Bissau",
     "emoji": "\uD83C\uDDEC\uD83C\uDDFC",
     "colors": ["RED", "YELLOW", "GREEN", "BLACK"],
-    "patterns": [{"item": "HORIZONTAL_STRIPE", "count": 3}],
+    "patterns": [{"item": "HORIZONTAL_STRIPE", "count": 2}, "VERTICAL_STRIPE"],
     "charges": ["STAR"]
   },
   {
