@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@RequestMapping("/vexle/api")
 public class Endpoint {
     @Autowired
     private FlagCompareService flagCompareService;
@@ -23,7 +24,7 @@ public class Endpoint {
     @Autowired
     private FlagLoader loader;
 
-    @PostMapping("/vexle/guess")
+    @PostMapping("/guess")
     @CrossOrigin("*")
     public FlagResponse guess(@RequestBody FlagRequest request) {
         var answer = request.getHardCodedAnswer() == null ?
@@ -32,7 +33,7 @@ public class Endpoint {
         return flagCompareService.multiCompare(answer, request.getGuesses());
     }
 
-    @GetMapping("/vexle/flags")
+    @GetMapping("/flags")
     @CrossOrigin("*")
     public List<FlagView> flags() {
         return loader.flags()
