@@ -1,0 +1,17 @@
+name: Rollout Docker Image
+
+on:
+  workflow_dispatch:
+    
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: kielabokkie/ssh-key-and-known-hosts-action@v1
+        name: Create SSH Agent
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+          ssh-host: ${{ secrets.SSH_HOST }}
+      - name: Run SSH Commands
+        run: |
+          ssh ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} "cd /root && docker compose up -d vexle-backend"
