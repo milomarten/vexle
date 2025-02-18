@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/vexle/api")
+@RequestMapping("/api")
 public class Endpoint {
     @Autowired
     private FlagCompareService flagCompareService;
