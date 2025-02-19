@@ -1,0 +1,3 @@
+[submodule "vexle-frontend"]
+	path = /vexle-frontend
+	url = https://github.com/milomarten/vexle-frontend.git
