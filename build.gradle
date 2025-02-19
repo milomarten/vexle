@@ -43,10 +43,10 @@ jar {
 
 tasks.register('createFrontend', Copy) {
 	dependsOn(':vexle-frontend:buildFrontend')
-	from '/vexle-frontend/out'
+	from 'vexle-frontend/out'
 	into layout.projectDirectory.dir('src/main/resources/static')
 }
 
 processResources.dependsOn('createFrontend')
 
-//clean.dependsOn(':vexle-frontend:cleanFrontend')
+clean.dependsOn(':vexle-frontend:cleanFrontend')
