@@ -40,3 +40,6 @@ tasks.named('test') {
 jar {
 	enabled = false
 }
+
+// To be commented out when I have reasonable belief this works
+//build.dependsOn(':vexle-frontend:buildFrontend')
