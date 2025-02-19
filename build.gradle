@@ -41,16 +41,12 @@ jar {
 	enabled = false
 }
 
-CopySpec webAssetsSpec = copySpec {
-	from '/vexle-frontend/out'
-//	include '**/*.md'
-}
-
-// To be commented out when I have reasonable belief this works
-//build.dependsOn(':vexle-frontend:buildFrontend')
-
 tasks.register('createFrontend', Copy) {
-	dependsOn(':vexle-frontend:buildFrontend')
+	dependsOn('processResources', ':vexle-frontend:buildFrontend')
+	from '/vexle-frontend/out'
 	into layout.projectDirectory.dir('src/main/resources/static')
-	with webAssetsSpec
 }
+
+build.dependsOn('createFrontend')
+
+clean.dependsOn(':vexle-frontend:cleanFrontend')
