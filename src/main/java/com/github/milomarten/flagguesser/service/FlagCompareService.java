@@ -23,10 +23,11 @@ public class FlagCompareService {
             comparison.getColors().put(attr, answerFlag.getColors().contains(attr));
         }
 
-        if (guessFlag.getPatterns() != null && answerFlag.getPatterns() != null) {
+        if (guessFlag.getPatterns() != null) {
             for (var attr : guessFlag.getPatterns().uniqueSet()) {
                 var guessCount = guessFlag.getPatterns().getCount(attr);
-                var answerCount = answerFlag.getPatterns().getCount(attr);
+                var answerCount = answerFlag.getPatterns() == null ?
+                        0 : answerFlag.getPatterns().getCount(attr);
 
                 var presentCount = Math.min(guessCount, answerCount);
                 var absentCount = Math.max(guessCount - answerCount, 0);
@@ -35,10 +36,11 @@ public class FlagCompareService {
             }
         }
 
-        if (guessFlag.getCharges() != null && answerFlag.getCharges() != null) {
+        if (guessFlag.getCharges() != null) {
             for (var attr : guessFlag.getCharges().uniqueSet()) {
                 var guessCount = guessFlag.getCharges().getCount(attr);
-                var answerCount = answerFlag.getCharges().getCount(attr);
+                var answerCount = answerFlag.getCharges() == null ?
+                        0 : answerFlag.getCharges().getCount(attr);
 
                 var presentCount = Math.min(guessCount, answerCount);
                 var absentCount = Math.max(guessCount - answerCount, 0);
