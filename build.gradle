@@ -47,6 +47,6 @@ tasks.register('createFrontend', Copy) {
 	into layout.projectDirectory.dir('src/main/resources/static')
 }
 
-//processResources.dependsOn('createFrontend')
+processResources.dependsOn('createFrontend')
 
 clean.dependsOn(':vexle-frontend:cleanFrontend')
