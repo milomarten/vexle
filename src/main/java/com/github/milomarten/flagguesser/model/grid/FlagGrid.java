@@ -41,7 +41,10 @@ public class FlagGrid {
         } else {
             this.allPatternsFound = answerFlag.getPatterns()
                     .stream()
-                    .allMatch(fp -> patterns.get(fp).isAllFound());
+                    .allMatch(fp -> {
+                        var patternStatus = patterns.get(fp);
+                        return patternStatus != null && patternStatus.isAllFound();
+                    });
         }
 
         if (answerFlag.getCharges() == null) {
@@ -49,7 +52,10 @@ public class FlagGrid {
         } else {
             this.allChargesFound = answerFlag.getCharges()
                     .stream()
-                    .allMatch(fc -> charges.get(fc).isAllFound());
+                    .allMatch(fc -> {
+                        var chargeStatus = charges.get(fc);
+                        return chargeStatus != null && chargeStatus.isAllFound();
+                    });
         }
     }
 
